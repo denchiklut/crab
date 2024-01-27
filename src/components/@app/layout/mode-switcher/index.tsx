@@ -6,7 +6,7 @@ export const ModeSwitcher = () => {
 	const { mode, toggleMode } = useTheme()
 
 	return (
-		<IconButton color='inherit' sx={{ ml: 'auto' }} onClick={() => toggleMode()}>
+		<IconButton color='inherit' onClick={() => toggleMode()}>
 			{mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
 		</IconButton>
 	)

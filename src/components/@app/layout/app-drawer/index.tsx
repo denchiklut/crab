@@ -8,13 +8,16 @@ import {
 	Toolbar,
 	Typography
 } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import { Menu } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import { useToggle } from 'utils/toggle'
 import { ModeSwitcher } from '../mode-switcher'
+import { LngSwitcher } from '../lng-switcher'
 
 export const AppDrawer = () => {
 	const [open, toggle] = useToggle()
+	const [t] = useTranslation()
 
 	return (
 		<>
@@ -24,9 +27,10 @@ export const AppDrawer = () => {
 						<Menu />
 					</IconButton>
 					<Typography variant='h6' noWrap>
-						MUI SSR Suspense Example
+						{t('app_name')}
 					</Typography>
 
+					<LngSwitcher />
 					<ModeSwitcher />
 				</Toolbar>
 			</AppBar>

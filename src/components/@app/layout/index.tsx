@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom'
 import { Box, Toolbar } from '@mui/material'
 import { ErrorBoundary } from 'react-error-boundary'
 import { AppDrawer } from './app-drawer'
+import { Loader } from '../../loader'
 import { Fallback } from '../error'
-import { Loader } from '../loader'
 
 export const Layout = () => {
 	return (
