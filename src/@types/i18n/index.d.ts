@@ -6,6 +6,7 @@ import type { defaultNamespace } from 'utils/i18n/config'
 const resources = { common, home } as const
 
 declare global {
+	type AppLocale = 'en' | 'ru'
 	type LocalesResources = typeof resources
 }
 

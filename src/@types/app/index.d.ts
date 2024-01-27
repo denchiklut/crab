@@ -1,1 +1,1 @@
-type AppLocale = 'en' | 'ru'
+type Nullable<T> = T | null
