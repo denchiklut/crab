@@ -27,16 +27,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
-
       - run: yarn build
+      - uses: jackyef/bundlewatch-gh-action@master
 
-  bundlewatch:
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-          - uses: actions/checkout@v3
-          - uses: ./.github/actions/setup
+        with:
+          bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
 
-            with:
-                bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+
 
