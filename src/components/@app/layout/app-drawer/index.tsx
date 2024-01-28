@@ -1,5 +1,6 @@
 import {
 	AppBar,
+	Avatar,
 	Button,
 	Divider,
 	Drawer,
@@ -8,8 +9,8 @@ import {
 	Toolbar,
 	Typography
 } from '@mui/material'
-import { useTranslation } from 'react-i18next'
 import { Menu } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { useToggle } from 'utils/toggle'
 import { ModeSwitcher } from '../mode-switcher'
@@ -37,16 +38,24 @@ export const AppDrawer = () => {
 
 			<Drawer open={open} onClick={toggle}>
 				<Toolbar />
-				<Stack divider={<Divider />} minWidth={250} sx={{ color: 'text.secondary' }}>
+				<Stack py={2} mt={2} mx='auto'>
+					<Avatar sx={{ mx: 'auto', width: 68, height: 68 }} />
+					<Typography mr='auto' py={1}>
+						{t('nav.username')}
+					</Typography>
+				</Stack>
+
+				<Divider />
+				<Stack divider={<Divider />} minWidth={290} sx={{ color: 'text.secondary' }}>
 					<Button color='inherit' component={Link} to='/'>
 						<Typography mr='auto' py={1}>
-							Home
+							{t('nav.home')}
 						</Typography>
 					</Button>
 
 					<Button color='inherit'>
 						<Typography mr='auto' py={1}>
-							About
+							{t('nav.about')}
 						</Typography>
 					</Button>
 				</Stack>
