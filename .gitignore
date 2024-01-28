@@ -3,6 +3,7 @@
 .eslintcache
 
 node_modules
+coverage
 dist
 
 yarn.lock
