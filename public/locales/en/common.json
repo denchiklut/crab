@@ -1,3 +1,8 @@
 {
-	"app_name": "Crab"
+	"app_name": "Crab",
+	"nav": {
+		"username": "User Name",
+		"home": "Home",
+		"about": "About"
+	}
 }
