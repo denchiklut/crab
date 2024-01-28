@@ -1,3 +1,3 @@
-module.exports = async () => {
+export default () => {
 	process.env.NODE_ENV = 'development'
 }
