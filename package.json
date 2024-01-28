@@ -45,15 +45,5 @@
 		"typescript": "^5.3.3",
 		"vite": "^5.0.12",
 		"vite-tsconfig-paths": "^4.3.1"
-	},
-	"bundlewatch": {
-		"ci": {
-			"githubAccessToken": "process.env.BUNDLEWATCH_GITHUB_TOKEN"
-		},
-		"files": [
-			{
-				"path": "dist/assets/*"
-			}
-		]
 	}
 }
