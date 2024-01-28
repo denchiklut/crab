@@ -49,7 +49,7 @@
 	"bundlewatch": {
 		"files": [
 			{
-				"path": "./dist/assets"
+				"path": "dist/assets"
 			}
 		]
 	}
