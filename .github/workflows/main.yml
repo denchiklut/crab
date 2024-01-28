@@ -1,8 +1,5 @@
 name: CI/CD
 
-env:
-    BUNDLEWATCH_GITHUB_TOKEN: "123"
-
 on:
   push:
     branches:
@@ -30,16 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
-      - run: |
-            if [ -z "${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}" ]; then
-              echo "Secret is NOT set."
-            else
-              echo "Secret is set."
-            fi
-      - run: echo ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
       - run: yarn build
       - run: npx bundlewatch dist/assets/*
-
-
-
-
+        env:
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
