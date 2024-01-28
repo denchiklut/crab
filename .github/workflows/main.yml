@@ -29,7 +29,7 @@ jobs:
       - uses: ./.github/actions/setup
       - run: yarn build
       - run: yarn build
-      - run: npx bundlewatch dist/assets/*
+      - run: npx bundlewatch
 
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
